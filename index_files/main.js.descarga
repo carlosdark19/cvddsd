@@ -1,0 +1,26 @@
+$(document).ready(function(){
+    $('label[for="shipping_address_1"]').empty()
+    $('label[for="shipping_address_1"]').text('Dirección de Envio')
+    $('label[for="shipping_address_1"]').append('<abbr class="required">*</abbr>')
+    $('#shipping_address_1').prop('placeholder', '');
+
+    $('#page .uk-text-center.letter-spacing').empty()
+    $('#page .uk-text-center.letter-spacing').text('ATENDEMOS LOS 365 DÍAS DEL AÑO')
+    $('label[for="billing_address_1"]').empty();
+    $('label[for="billing_address_1"]').text('Dirección');
+	$('label[for="shipping_address_2"]').empty();
+    $('label[for="shipping_address_2"]').text('Barrio');
+
+    $('.boton-whatsapp').on('click', function(){
+        $('.icontainer').toggleClass('show');
+    })
+
+    $(document).on('click','.remove_from_cart_button', function(){
+
+        $(this).parent().remove()
+
+    })
+	
+
+	
+})

@@ -1,0 +1,404 @@
+/*
+Theme Name: Floristería Hijo
+Description: Tema hijo de florísteria kennedy para hacer cambios sin riesgo
+Author: Edd B. Simbolo Agencia Digital
+Template: storefront
+*/
+
+/*estilos custom, no usar important a menos q sea extrictamente necesario*/
+@import 'https://www.floristeriajardinkennedy.com/wp-content/themes/storefront-child/sass/main.css';
+
+.product_list_widget li{
+    border-bottom: 1px solid #913c7d
+}
+
+#order_comments_field:after{
+    content: "Horario de entrega es de 6:00 a.m a 9 p.m de lunes a sabado y domingos de 7:00 am a 7:00 pm"!important
+}
+
+
+.uk-text-center:after{
+    content: ""!important
+}
+
+@media (min-width: 768px){
+
+    .uk-dropdown.uk-open{
+        left: 35px!important;
+    }
+
+    .uk-dropdown .woocommerce-mini-cart{
+        min-width: 267px;
+    }
+
+    .woocommerce-mini-cart__buttons.buttons a{
+       font-size: .875rem
+    }
+
+}
+	
+ul#ulContacto li,
+ul.uk-listF  li{
+  display: inline-block;
+}
+
+ul#ulContacto,
+ul#ulTelf{
+    list-style: none;
+    position: relative;
+    margin: 0;
+}
+
+h5.titlNum {
+    font-size: 25px;
+}
+
+#woof_widget-3{
+	background: #f7f7f7;
+    border: solid 1px #c9c9c9;
+    padding: 40px 15px;
+    border-radius: 5px;
+}
+
+#nav_menu-3{
+	    margin-top: 10px;
+    padding: 40px 15px;
+    border: solid 1px #c9c9c9;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+#facbCont {
+    width: 10%;
+}
+
+#instCont {
+	width: 10%;
+}
+
+img.imgFC,
+img.imgIN{
+    width: 100%
+}
+
+img.imgFCF,
+img.imgINF{
+    width: 100%
+}
+
+#facbList {
+	width: 20%
+}
+
+#instList {
+	width: 20%
+}
+
+ul.uk-list.listSupM {
+    display: flex;
+    flex-flow: nowrap;
+}
+
+li.listIcono {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.woocommerce-additional-fields #order_comments_field:after{
+    content: "Horario de entrega es de 6:00 a.m a 9 p.m de lunes a sábado, domingos y festivos de 7:00 am a 7:00 pm"!important;
+}
+
+
+h1.product_title{
+	font-size: 2em;
+}
+   
+
+
+@media(max-width: 1023px) {
+    img.imgFCF,
+    img.imgINF{
+        width: 100%
+    }
+
+    #facbList,
+    #instList {
+        width: 40%;
+    }
+
+    ul.uk-iconnavM {
+        width: 150px;
+    }
+
+
+    .floatLlamada{
+        text-align: center;
+        bottom: 62px;
+        z-index: 60;
+        right: 15px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+
+   .my-float {
+    margin-top: 10px;
+   }
+
+}
+
+
+@media screen and (max-width: 1920px) and (min-width: 1024px) {
+    .floatLlamada {
+        display: none;
+    }
+
+    .primary-navigation {
+    display: inline-block;
+    }  
+
+   .dgwt-wcas-search-wrapp {
+    display: inline-block!important;
+   } 
+}
+
+
+
+@media(max-width: 375px) {
+    .dgwt-wcas-ico-magnifier {
+      display: none!important;
+   }
+   /* .dgwt-wcas-search-wrapp {
+    padding: 6px 0px;
+    top: 3px;
+   } */
+	
+/*    .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+	   width: 71%!important;
+	} */
+	
+	.dgwt-wcas-search-wrapp {
+    max-width: 135px!important;
+   }
+	.dgwt-wcas-search-wrapp {
+    min-width: 0!important;
+    width: 100%!important;
+    text-align: right!important;
+   }
+	
+	.dgwt-wcas-search-form {
+    height: 0!important;
+    }
+	
+	.dgwt-wcas-sf-wrapp {
+    height: 0!important;
+   }
+	
+	.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+      margin: 0px 30px!important;
+		padding: 0 0!important;
+     }
+	
+}
+
+
+
+.icontainer{
+	background: rgba(255, 1, 0, 0);
+    padding: 15px 35px;
+    border: #c9c9c9;
+    position: fixed;
+    bottom: 180px;
+    right: -10px;
+    z-index: 50;
+    min-height: 150px;
+    min-width: 88px;
+	/* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; */
+	display: none;
+    }
+    
+.icontainer.show{
+    display: block;
+    z-index: 99999999999
+  }
+
+.icontainer ul{
+	list-style: none;
+	margin: 0
+}
+
+a:hover.boton-whatsapp {
+    color: #ffffff;
+}
+
+.float {
+    right: 15px;
+}
+
+
+/* .primary-navigation {
+    display: inline-block;
+} */
+
+/* .dgwt-wcas-search-wrapp {
+    display: inline-block!important;
+} */
+
+
+#nav_menu-2{
+    background-color: #f7f7f7
+}
+
+#menu-busqueda .menu-item a:first-child{
+    border-bottom: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #913c7d;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.41575em;
+}
+
+.sub-menu .menu-item{
+    margin: 0
+}
+
+.sub-menu .menu-item a{
+    border-bottom: none;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.675rem!important;
+    line-height: 5px;
+    color: #6d6d6d!important;
+    font-weight: 100
+}
+
+
+.sub-menu .menu-item a:hover{
+    color: #913c7d!important
+}
+
+.sub-menu .menu-item{
+    padding: 0
+}
+
+#menu-busqueda .menu-item::before{
+    content: ""!important
+}
+
+li#menu-item-697 {
+    display: none;
+}
+ul.listSeoFlex {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	list-style-type: none;
+}
+
+ul.listSeoFlex li {
+	padding: 5px;
+	list-style-type: none;
+}
+
+ul.listSeoFlex li h2 {
+	font-size: 12px!important;
+	margin: 5px;
+	padding: 0px;
+}
+
+section.seo h1 {
+	font-size: 20px!important;
+	text-align: center!important;
+	margin: 5px;
+	padding: 0px;
+}
+
+.woocommerce-checkout ul#shipping_method li input[type=radio] {
+    display: inline-block!important;
+    vertical-align: middle;
+}
+
+/*PAGINATION FUNCTION*/
+.navigation li a,.navigation li a:hover,.navigation li.active a,
+.navigation li.disabled {color: #fff;text-decoration:none;}
+.navigation li {display: inline;}
+.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled {
+background-color: #913c7d; border-radius: 3px;cursor: pointer;padding: 12px;padding: 0.75rem;}
+.navigation li a:hover,.navigation li.active a {background-color: #b62f96;}
+.navigation {display: flex;justify-content: center;align-content: center;}
+.navigation ul {margin: 0 0 1.41575em 0!important;}
+
+body.single-product .ssba-classic-2.ssba.ssbp-wrap.center.ssbp--theme-1 {
+    display: none!important;
+}
+
+
+@media (max-width: 550px) {
+ul.listSeoFlex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0px 0px 5px 0px;
+}
+	
+	ul.listSeoFlex li h2 {
+	font-size: 12px!important;
+	margin: 0;
+	}
+
+	section.seo h1 {
+	font-size: 20px!important;
+	}
+}
+button.woof_reset_button_2 {
+    display: none;
+}
+
+.content-area {
+    width: 100% !important;
+}
+
+a.float.boton-whatsapp{
+	display: none;
+}
+
+.dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp {
+    background: transparent;
+}
+
+.site-header ul.menu li.current-menu-item > a {
+    color: #ffffff;
+}
+
+.cr-ajax-reviews-review-form .cr-form-item-media {
+	display: none ;
+}
+
+.woocommerce-noreviews, 
+p.no-comments {
+    background-color: #913c7d;
+}
+
+body.single-post article.post img.wp-post-image{
+	display: none !important;
+}
+
+.woocommerce-products-header__title{
+	font-size: 30px;
+}
+
+body.archive ul.products li.product img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+}
