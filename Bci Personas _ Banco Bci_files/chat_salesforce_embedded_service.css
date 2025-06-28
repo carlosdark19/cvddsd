@@ -1,0 +1,170 @@
+/*CSS Embedded Service*/
+
+/*Embedded Service Help Button customizado*/
+.embeddedServiceHelpButton .helpButton {
+    bottom: 7.5rem !important;
+    margin-right: 3.313rem !important;
+}
+.embeddedServiceHelpButton .helpButton ::before {
+    border-radius: 24px 24px 24px 3px!important;
+}
+.embeddedServiceHelpButton .helpButton .uiButton {
+    width: 48px !important;
+    min-width: 48px !important;
+    height: 48px !important;
+    background-color: #ffffff !important;
+    background-image: url("https://cdn2.bci.cl/chat_salesforce/imagenes/imagenes/chat-avatar-publico.svg") !important;
+    background-size: contain !important;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.28) !important;
+    border-radius: 24px 24px 24px 5px !important;
+}
+.embeddedServiceHelpButton .embeddedServiceIcon {
+	display: none !important;
+}
+.embeddedServiceHelpButton .uiButton .helpButtonLabel {
+    position: fixed !important;
+    bottom: 7.4rem !important;
+    right: 7.7rem !important;
+    height: 28px !important;
+    width: 154px !important;
+    min-width: 154px !important;
+    border-radius: 6px !important;
+    background-color: #528ED6 !important;
+    color: #FFFFFF !important;
+    font-family: Overpass !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02px !important;
+    line-height: 24px !important;
+}
+.embeddedServiceHelpButton .uiButton.helpButtonDisabled .helpButtonLabel .message {
+    white-space: break-spaces !important;
+    line-height: normal !important;
+}
+/*----------------------------------------*/
+
+
+/*Workarround para modificar estilos del
+chat integrado que desde Salesforce,
+de momento, no es posible*/
+.embeddedServiceLiveAgentStateWaiting .embeddedServiceLoadingBalls {
+	display: none !important;
+}
+.embeddedServiceLiveAgentQueuePosition .queuePositionChatIcon {
+	display: none !important;
+}
+.embeddedServiceLiveAgentStateWaiting .waitingStateContent {
+    color: #546e74;
+    background-color: #fbfbfb;
+}
+.embeddedServiceLiveAgentStateWaiting .waitingImage {
+	height: 7.188rem !important;
+}
+.embeddedServiceLiveAgentQueuePosition.queuePositionWaiting .youAreNextMessage {
+    margin: 0 0 2px !important;
+    font-size: 1rem !important;
+}
+.embeddedServiceLiveAgentStateChatItem.chatMessage {
+    margin-bottom: 0.563rem !important;
+}
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent a {
+    color: #2772CC !important;
+}
+.embeddedServiceSidebarButton {
+    background: #28892b !important;
+    border-radius: 1.875rem !important;
+    height: 2.25rem !important;
+}
+.embeddedServiceSidebarButton:not(:disabled):focus, .embeddedServiceSidebarButton:not(:disabled):hover {
+    background: #53A155 !important;
+}
+.embeddedServiceSidebarButton.uiButton--inverse:not(:disabled):focus, .embeddedServiceSidebarButton.uiButton--inverse:not(:disabled):hover {
+    background-color: #D4E7D5 !important;
+    border: 1px solid #28892B !important;
+    color: #28892B !important;
+}
+.embeddedServiceSidebarButton.uiButton--inverse {
+    background-color: #FFFFFF !important;
+    border: 1px solid #28892B !important;
+}
+.embeddedServiceSidebarButton.uiButton--inverse .label {
+    color: #28892b !important;
+}
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
+    width: 14.188rem !important;
+    margin: 0 0 0 2.5rem !important;
+    font-size: 0.875rem !important;
+    color: #576D7B !important;
+}
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item:hover,
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item:active,
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item:hover:active,
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item:focus,
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item:focus:hover {
+    color: #546E7A !important;
+    background-color: #E2E8EA !important;
+}
+.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover,
+.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover:focus,
+.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover span,
+.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover:focus span {
+    background: #E2E8EA !important;
+    color: #546E7A !important;
+}
+.embeddedServiceLiveAgentStateChatButtonItem {
+   margin: 0.25rem 0 !important;
+   font-size: 0.875rem !important;
+   border: 1px solid #BBC5CA !important;
+   box-shadow: none !important;
+}
+.embeddedServiceLiveAgentStateChat .endChatContainer {
+   padding: 0 0 0 !important;
+}
+.embeddedServiceLiveAgentStateChat .endChatContainer .endChatButton {
+    margin: 0.625rem auto !important;
+}
+.embeddedServiceLiveAgentStateChatItem.agent .agentName {
+    display: none !important;
+}
+.embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider {
+    display: none !important;
+}
+.embeddedServiceLiveAgentStateChatItem.agent .timeContent  {
+    margin-left: 2.75rem !important;
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (max-device-width: 1400px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.plaintextContent {
+        max-width: 85%!important;
+    }
+}
+@media screen 
+  and (min-device-width: 1400px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.plaintextContent {
+        max-width: 73.5%!important;
+    }
+}
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px)
+  and (max-device-width: 1980px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.plaintextContent {
+        max-width: 80%!important;
+    }
+}
+/*----------------------------------------*/
+
+
+/* Esta clase tiene que ser implementada
+unicamente por los sitios publicos
+que tienen formulario de pre-chat*/
+.pre-chat-form_inputs[c-serv_PreChatForm_serv_PreChatForm] .slds-input {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+/*----------------------------------------*/
