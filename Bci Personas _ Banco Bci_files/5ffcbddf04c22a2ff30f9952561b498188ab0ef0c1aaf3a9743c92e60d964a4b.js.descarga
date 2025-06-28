@@ -1,0 +1,41 @@
+function readCookie2(name) {
+	return (
+		decodeURIComponent(
+			document.cookie.replace(
+				new RegExp(
+					'(?:(?:^|.*;)\\s*' +
+						name.replace(/[\-\.\+\*]/g, '\\$&') +
+						'\\s*\\=\\s*([^;]*).*$)|^.*$'
+				),
+				'$1'
+			)
+		) || null
+	);
+}
+var cic2 = readCookie2('userID');
+
+if (!cic2) {
+	jQuery('.nav-experiences .ncc').addClass('active').removeClass('d-none');
+	jQuery('.nav-experiences .cc').addClass('d-none').removeClass('active');
+
+	jQuery('#experience-tabContent .ncc')
+		.addClass('active')
+		.addClass('show')
+		.removeClass('d-none');
+	jQuery('#experience-tabContent .cc')
+		.addClass('d-none')
+		.removeClass('active')
+		.removeClass('show');
+} else {
+	jQuery('.nav-experiences .cc').addClass('active').removeClass('d-none');
+	jQuery('.nav-experiences .ncc').addClass('d-none').removeClass('active');
+
+	jQuery('#experience-tabContent .cc')
+		.addClass('active')
+		.addClass('show')
+		.removeClass('d-none');
+	jQuery('#experience-tabContent .ncc')
+		.addClass('d-none')
+		.removeClass('active')
+		.removeClass('show');
+}

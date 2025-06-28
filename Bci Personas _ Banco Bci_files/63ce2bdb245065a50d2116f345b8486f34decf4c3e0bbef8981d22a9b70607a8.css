@@ -1,0 +1,398 @@
+.tns-outer{padding:0 !important}.tns-outer [hidden]{display:none !important}.tns-outer [aria-controls],.tns-outer [data-action]{cursor:pointer}.tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}.tns-slider>.tns-item{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tns-horizontal.tns-subpixel{white-space:nowrap}.tns-horizontal.tns-subpixel>.tns-item{display:inline-block;vertical-align:top;white-space:normal}.tns-horizontal.tns-no-subpixel:after{content:'';display:table;clear:both}.tns-horizontal.tns-no-subpixel>.tns-item{float:left}.tns-horizontal.tns-carousel.tns-no-subpixel>.tns-item{margin-right:-100%}.tns-no-calc{position:relative;left:0}.tns-gallery{position:relative;left:0;min-height:1px}.tns-gallery>.tns-item{position:absolute;left:-100%;-webkit-transition:transform 0s, opacity 0s;-moz-transition:transform 0s, opacity 0s;transition:transform 0s, opacity 0s}.tns-gallery>.tns-slide-active{position:relative;left:auto !important}.tns-gallery>.tns-moving{-webkit-transition:all 0.25s;-moz-transition:all 0.25s;transition:all 0.25s}.tns-autowidth{display:inline-block}.tns-lazy-img{-webkit-transition:opacity 0.6s;-moz-transition:opacity 0.6s;transition:opacity 0.6s;opacity:0.6}.tns-lazy-img.tns-complete{opacity:1}.tns-ah{-webkit-transition:height 0s;-moz-transition:height 0s;transition:height 0s}.tns-ovh{overflow:hidden}.tns-visually-hidden{position:absolute;left:-10000em}.tns-transparent{opacity:0;visibility:hidden}.tns-fadeIn{opacity:1;filter:alpha(opacity=100);z-index:0}.tns-normal,.tns-fadeOut{opacity:0;filter:alpha(opacity=0);z-index:-1}.tns-vpfix{white-space:nowrap}.tns-vpfix>div,.tns-vpfix>li{display:inline-block}.tns-t-subp2{margin:0 auto;width:310px;position:relative;height:10px;overflow:hidden}.tns-t-ct{width:2333.3333333%;width:-webkit-calc(100% * 70 / 3);width:-moz-calc(100% * 70 / 3);width:calc(100% * 70 / 3);position:absolute;right:0}.tns-t-ct:after{content:'';display:table;clear:both}.tns-t-ct>div{width:1.4285714%;width:-webkit-calc(100% / 70);width:-moz-calc(100% / 70);width:calc(100% / 70);height:10px;float:left}
+
+/*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
+.color-gray-semidark-ben{
+	color: #37474F !important;
+}
+.benefits-home {
+        margin-bottom: 5rem
+    }
+
+    .benefits-home .nav-item {
+        font-weight: 400;
+        text-transform: capitalize;
+        width: 100%
+    }
+
+    .nav-pills {
+        margin: -.25rem
+    }
+
+    .nav-pills .nav-link.active span {
+        color: #fff
+    }
+
+    .nav-pills .nav-item:first-child .nav-link.active {
+        background-color: #f13d47
+    }
+
+    .nav-pills .nav-item:nth-child(2) .nav-link.active {
+        background-color: #53a155
+    }
+
+    .nav-pills .nav-item {
+        width: 16.6%
+    }
+
+    .text-truncate-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden
+    }
+
+    #pills-beneficios .title-mobile:before {
+        background-color: var(--red-80)
+    }
+
+    @media (min-width:768px) {
+        .nav-pills .nav-item {
+            width: 100%
+        }
+
+        .nav-pills {
+            margin: 0
+        }
+
+        .cont-benefit-box {
+            width: 100%
+        }
+
+        .card-benefit.card-img {
+            width: 100%
+        }
+    }
+
+    ------------------------------------ #compra-con .compra-con {
+        padding: 200 40px 0
+    }
+
+    .card-img__logo {
+        position: absolute !important;
+        bottom: 160px !important;
+        left: 10px !important;
+        width: 90px !important;
+        height: 90px !important
+    }
+
+    .card-img__bg {
+        position: relative;
+        height: 260px !important;
+				background-position: center;
+    }
+
+    .card-benefit {
+        transition: transform .3s ease-in-out;
+        border-radius: 15px
+    }
+
+    @media screen and (max-width:480px) {
+        #beneficios {
+            border-radius: 0
+        }
+    }
+
+    .cont-slider-destacado-ben {
+        overflow: hidden;
+        position: relative
+    }
+
+    .cont-slider-destacado-ben .gray-column {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 320px;
+        z-index: -1
+    }
+
+    .cont-slider-destacado-ben .cont-slider {
+        background-position: -65px center;
+        background-repeat: no-repeat;
+        background-size: auto
+    }
+
+    .cont-slider-destacado-ben .cont-slider .container {
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        background-size: 140px
+    }
+
+    .cont-slider-destacado-ben .slider-thumbnail {
+        cursor: pointer
+    }
+
+    .cont-slider-destacado-ben .slider-thumbnail ul li:first-child h3 {
+        font-size: 1.563rem
+    }
+
+    .cont-slider-destacado-ben .slider-thumbnail ul li,
+    .cont-slider-destacado-ben .slider-thumbnail ul li h3 {
+        color: #909ba0;
+        line-height: 1.2rem
+    }
+
+    .cont-slider-destacado-ben .border-active {
+        background-color: #fff;
+        bottom: 0;
+        display: block;
+        height: 4px;
+        position: absolute;
+        width: 50%
+    }
+
+    .border-md {
+        -webkit-border-radius: .375rem;
+        -moz-border-radius: .375rem;
+        border-radius: .375rem
+    }
+
+    .cont-slider-destacado-ben .mobile-thumbnals button {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -khtml-border-radius: 50%;
+        background-color: var(--gray-semilight);
+        border: 0 none;
+        height: 12px;
+        line-height: 12px;
+        margin: 0 5px;
+        padding: 0;
+        width: 12px
+    }
+
+    .cont-slider-destacado-ben .mobile-thumbnals button:focus {
+        outline: 0
+    }
+
+    .cont-slider-destacado-ben .box-shadow {
+        -moz-box-shadow: 0 2px 8px rgba(55, 71, 79, .2);
+        -webkit-box-shadow: 0 2px 8px rgba(55, 71, 79, .2);
+        box-shadow: 0 2px 8px rgba(55, 71, 79, .2)
+    }
+
+    @media (min-width:768px) {
+        .border-md {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0
+        }
+
+        .cont-slider-destacado-ben .cont-slider {
+            background-position: nter;
+            background-size: contain;
+            cursor: default
+        }
+
+        .cont-slider-destacado-ben .cont-slider .container {
+            background-position: 15px center;
+            background-size: 200px
+        }
+
+        .cont-height100 {
+            heightalc(100vh - 120px)
+        }
+			
+			.pills-beneficios-tab:hover{
+					/*width: 105%;
+					height: 105%;*/
+					box-shadow: 0px 2px 15px rgba(55, 71, 79, 0.2);
+					-webkit-box-shadow: 0px 2px 15px rgba(55, 71, 79, 0.2);	
+					transform: scale(1.05);
+			}
+			
+			/*.pills-beneficios-tab:hover > div > .img-card-investment{
+				width: 95px;
+    		height: 95px;
+			}*/
+    }
+
+.btnpag-active {
+	    background: #546E7A !important;
+}
+
+.deskt-thumbnals-ben button {
+    border-radius: 50%;
+    background-color: var(--gray-semilight);
+    border: 0 none;
+    height: 8px;
+    line-height: 12px;
+    margin: 0 10px;
+    padding: 0;
+    width: 8px;
+}
+
+.deskt-thumbnals-ben button:hover {
+    background: #546E7A !important;
+}
+
+/*.pills-beneficios-tab:hover > .investment-card-ben > .img-card-investment {
+    width: 88px;
+    height: 88px;
+    transition: all .4s ease-in;
+}*/
+
+.img-card-investment{
+    width: 85px;
+    height: 85px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;    
+		border: 1px solid #E2E8EA;
+	 	transition: all .4s ease-in;
+}
+
+.tns-controls-ben {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 25%;
+    transition: all 0.3s ease;
+    width: 90%;
+    z-index: 1;
+    opacity: 1;
+}
+
+.tns-controls-ben button {
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--gray-semilight);
+    color: var(--gray-neutral);
+    font-family: 'BCI Icons';
+    font-size: 1rem;
+    font-weight: bold;
+    height: 45px;
+    width: 45px;
+	  cursor: pointer;
+		-webkit-appearance: button;
+}
+
+.tns-controls-ben button:first-child:before {
+    content: "\e90d";
+}
+
+.tns-controls-ben button:last-child:before {
+    content: "\e90e";
+}
+
+.tns-controls-ben button:hover {
+    background-color: var(--gray-semilight);
+}
+
+.etiqueta-card-ben{
+		color: white !important;
+    font-size: 12px !important;
+    background-color: #005FFF !important;
+    height: 18px;
+    width: fit-content;
+	  border-radius: 4px !important;
+    position: absolute !important;
+    inset: 236px 0 0 8px !important;
+    transform: none !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 4px 8px;
+    gap: 8px;
+    font-family: 'Overpass';
+    line-height: 16;
+    font-weight: 600;
+}
+
+.btn-ben {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid transparent;
+    padding: 0.813rem 1.875rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 3rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (max-width:767px) {
+			.card-img__logo {
+					position: absolute !important;
+					bottom: 100px !important;
+					left: 10px !important;
+					width: 90px !important;
+					height: 90px !important;
+			}
+			
+			.etiqueta-card-ben {
+				inset: 175px 0 0 8px !important;
+			}
+			
+			.cont-slider {
+					width: 300px;
+				  height: fit-content;
+					justify-content: center;
+        	display: inline-flex !important;
+			}
+			
+			.card-img__bg {
+					height: 200px !important;
+			}
+	
+			.cont-slider > a {
+        width: 300px;
+        display: block;
+    	}
+	
+			.padding-0-mobile{
+		    padding-right: 0 !important;
+    		padding-left: 0 !important;		
+			}
+		}
+
+	.slider-destacado-ben > .tns-outer > .tns-controls{
+		display:none;
+	}
+
+.slider-destacado-ben > .tns-outer > .tns-nav{
+		display:none;
+	}
+
+.pills-beneficios-tab{
+	transition: all .5s ease-in;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 2px 8px rgba(55, 71, 79, 0.2);
+  -webkit-box-shadow: 0px 2px 8px rgba(55, 71, 79, 0.2);	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+			.d-none-ipadmini{
+				display:none !important;
+			}
+	
+			.d-block-ipadmini{
+				display:block !important;
+				margin-top: 9px;
+			}
+	
+			.style-ipadmini > div.container{
+				bottom: 185px !important;
+			}
+	
+			.style-ipadmini > div.d-flex.justify-content-center.botonerapagdekt-ben > div{
+						width: 85%;
+					}
+
+			.style-ipadmini > #VivirconbeneficiosData > div > a > article > figure{
+				background-positon-x: left;
+			}
+}
+
+.ben-dnone{
+	display: none !important;
+}

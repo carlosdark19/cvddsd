@@ -1,0 +1,174 @@
+/* Your code */
+.experience-digital {
+
+	margin-bottom: 6rem; 
+}
+.experience-digital .d-none{
+	display: none;
+}
+.experience-digital .nav-item{
+	font-weight: normal;
+	text-transform: capitalize;
+	width: 100%;
+}
+.nav-experiences{
+	margin: -0.25rem;
+}
+.nav-link {
+	height: 72px;
+}
+.main-content {
+	height: 30rem;
+}
+
+.icon-finanzas{width: 300px !important;}
+
+.nav-experiences .nav-link.active span,
+.nav-experiences .show>.nav-link span{
+	color: #fff;
+}
+.nav-experiences .nav-item .nav-link.active,
+.nav-experiences .nav-item .show>.nav-link{
+	background-color: #F13D47;
+}
+.nav-experiences .nav-item{
+	width: 16.6%;
+}
+
+/* MACHPAY */
+
+.nav-experiences .nav-link.active .machpay-icon,
+.nav-experiences .show>.nav-link .machpay-icon{
+	filter: brightness(0) saturate(100%) invert(99%) sepia(87%) saturate(0%) hue-rotate(63deg) brightness(115%) contrast(101%);
+}
+
+.machpay .machpay-logo {
+	width: 120px; 
+	height: 90px;
+}
+
+.machpay-content {
+	max-width: 30rem;
+}
+.machpay-gif {
+	position: absolute;
+	top: -1.5rem;
+	width:300px;
+
+}
+
+.cyber-w {
+	position: absolute;
+	top: -1.5rem;
+	width: 256px;
+
+}
+
+
+.cuenta-digital .description {
+	z-index: 1;
+}
+
+.cuenta-digital-content {
+	max-width: 25rem;
+}
+
+.cuenta-digital-animation {
+	position: absolute;
+	top: 3.5rem;
+}
+.tus-movimientos-animation {
+	position: absolute;
+	top: 2rem;
+}
+.image-circle {
+	/*border-radius: 50%;*/
+	margin-left: 10px;
+}
+.circle-back {
+	position: absolute;
+	top: -7px;
+	z-index: -1;
+}
+.circle-image-container {
+	width: 100px;
+	height: 90px;
+}
+
+/* Tus movimientos */
+
+.tus-movimientos-content {
+	max-width: 24rem;
+}
+.text-contenido {
+	font-size: 18px;
+}
+.text-26 {
+	font-size: 26px;
+}
+.fs-28 {
+	font-size: 28px;	
+}
+.introduction-home {
+	font-size: 26px
+}
+
+.nav-experiences .nav-item.desktop,
+.tab-content>.tab-pane.desktop.active {
+	display: none
+}
+@media (min-width: 768px){
+	.nav-experiences .nav-item{
+		width: 100%;
+	}
+	.nav-experiences{
+		margin: 0;
+	}
+	.cont-benefit-box{
+		width: 100%;
+	}
+	.wrap-benefit-boxes{
+		overflow-x: visible;
+	}
+	.card-benefit.card-img {
+		width: 100%;
+	}
+	.cuenta-digital {
+		margin-bottom: 80px;
+	}
+	.nav-experiences .nav-item.mobile,
+	.tab-content>.tab-pane.mobile {
+		display: none
+	}
+	.nav-experiences .nav-item.desktop,
+  .tab-content>.tab-pane.desktop.active {
+	display: block
+}
+}
+
+@media (max-width: 576px){
+	.main-content {
+		padding: 0 1rem;
+	}
+	.nav-link {
+		min-height: 74px;
+		min-width: 74px;
+	}
+	.nav-item {
+		min-height: 74px;
+		min-width: 74px;
+		margin-right: 6px;
+	}
+	.text-26 {
+		font-size: 22px;
+	}
+	.introduction-home {
+		font-size: 24px
+	}
+	.experience-digital {
+		min-height: 679px;
+	}
+	.cta-cuenta-digital {
+		margin-top: 45px;
+	}
+}

@@ -1,0 +1,161 @@
+function iniciarChatWebPublico(enviromentConfigData, path) {
+	var initESW = function(gslbBaseURL) {
+
+        var unidadDeNegocio, origen, chatButtonId;
+
+        switch (path) {
+            case "personas":
+                unidadDeNegocio = "BCI";
+                origen = "Publico Personas";
+                chatButtonId = enviromentConfigData.chatButtonWebPublicoPersonasId;
+                break;
+            case "empresarios":
+                unidadDeNegocio = "PYME";
+                origen = "Publico Pyme";
+                chatButtonId = enviromentConfigData.chatButtonWebPublicoPymeId;
+                break;
+            case "seguros":
+                unidadDeNegocio = "Seguros";
+                origen = "Publico Seguros";
+                chatButtonId = enviromentConfigData.chatButtonWebPublicoSegurosId;
+                break;
+            default:
+                unidadDeNegocio = "";
+                origen = "";
+                chatButtonId = "";
+        }
+
+        window.embedded_svc.settings.displayHelpButton = true;
+        window.embedded_svc.settings.language = 'es';
+        window.embedded_svc.settings.defaultMinimizedText = 'Hola ¿Necesitas ayuda?';
+        window.embedded_svc.settings.disabledMinimizedText = 'Cargando...';
+        window.embedded_svc.settings.loadingText = 'Cargando';
+        window.embedded_svc.settings.autoOpenPostChat = true;
+        window.embedded_svc.settings.chatbotAvatarImgURL = "https://cdn2.bci.cl/chat_salesforce/imagenes/imagenes/avatar-asistente-chat.svg";
+
+        window.embedded_svc.settings.extraPrechatFormDetails = [{
+            label: "Nombre",
+            transcriptFields: ["bci_prechat_nombre__c"],
+            displayToAgent: true
+        }, {
+            label: "RUT",
+            transcriptFields: ["bci_prechat_rut__c"],
+            displayToAgent: true
+        }, {
+            label: "Origin",
+            value: origen,
+            displayToAgent: false
+        }, {
+            label: "Status",
+            value: "Creado",
+            displayToAgent: false
+        }, {
+            label: "Unidad de negocio",
+            value: unidadDeNegocio,
+            displayToAgent: false
+        }, {
+            label: "Record Type Id",
+            value: enviromentConfigData.chatClienteRecordTypeId,
+            displayToAgent: false
+        }];
+
+        window.embedded_svc.settings.extraPrechatInfo = [{
+            "entityName":"Contact",
+            "entityFieldMaps": [{
+                "doCreate":false,
+                "doFind":false,
+                "fieldName":"FirstName",
+                "isExactMatch":false,
+                "label":"Nombre"
+            }]
+        }, {
+            "entityName": "Case",
+            "showOnCreate": true,
+            "saveToTranscript": "CaseId",
+            "entityFieldMaps": [{
+                "isExactMatch": false,
+                "fieldName": "Status",
+                "doCreate": true,
+                "label": "Status"
+            }, {
+                "isExactMatch": false,
+                "fieldName": "Origin",
+                "doCreate": true,
+                "label": "Origin"
+            }, {
+                "isExactMatch": false,
+                "fieldName": "bci_tip_uni_neg__c",
+                "doCreate": true,
+                "label": "Unidad de negocio"
+            }, {
+                "isExactMatch": false,
+                "fieldName": "RecordTypeId",
+                "doCreate": true,
+                "label": "Record Type Id"
+            }, {
+                "isExactMatch": false,
+                "fieldName": "bci_rut__c",
+                "doCreate": true,
+                "label": "RUT"
+            }]
+        }];
+
+        window.embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        window.embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        window.embedded_svc.init(
+            enviromentConfigData.salesforceURL,
+            enviromentConfigData.communityURL,
+            gslbBaseURL,
+            enviromentConfigData.orgId,
+            enviromentConfigData.chatSnapinWebPublicoName,
+            {
+                baseLiveAgentContentURL: enviromentConfigData.chatBaseLiveAgentContentURL,
+                deploymentId: enviromentConfigData.chatDeploymentWebPublicoId,
+                buttonId: chatButtonId,
+                baseLiveAgentURL: enviromentConfigData.chatBaseLiveAgentURL,
+                eswLiveAgentDevName: enviromentConfigData.eswLiveAgentWebPublicoDevName,
+                isOfflineSupportEnabled: false
+            }
+        );
+
+        setTimeout(function() {
+            var chatBtnLabel = document.querySelector(".embeddedServiceHelpButton .uiButton .helpButtonLabel");
+            if (chatBtnLabel) {
+                chatBtnLabel.style.display = "none";
+            }
+        }, 10000);
+    };
+
+    if (!window.embedded_svc) {
+        var scriptElement = document.createElement('script');
+        scriptElement.setAttribute('src', enviromentConfigData.salesforceURL + '/embeddedservice/5.0/esw.min.js');
+        scriptElement.onload = function () {
+            initESW(null);
+        };
+        document.body.appendChild(scriptElement);
+    } else {
+        initESW('https://service.force.com');
+    }
+}
+	
+
+function loadChar(){
+	
+// Variables de Entorno //
+var enviromentConfigData= {
+      chatButtonWebPublicoPersonasId: "5733p000000XZFI",
+      salesforceURL: "https://bancodecreditoeinversiones.my.salesforce.com",
+      communityURL: "https://bancodecreditoeinversiones.my.salesforce-sites.com/liveAgentSetupFlow",
+      orgId: "00D1U000000D28n",
+      chatSnapinWebPublicoName: "Web_Publico",
+      chatBaseLiveAgentContentURL: "https://c.la1-c1-ia7.salesforceliveagent.com/content",
+      chatDeploymentWebPublicoId: "5723p000000XZCi",
+      chatBaseLiveAgentURL: "https://d.la1-c1-ia7.salesforceliveagent.com/chat",
+      chatClienteRecordTypeId: "0123p000000YUnVAAW",
+      eswLiveAgentWebPublicoDevName: "EmbeddedServiceLiveAgent_Parent04I4C0000004CCgUAM_17aacf1628a"
+};
+	
+	iniciarChatWebPublico(enviromentConfigData, 'personas');
+}
+loadChar();

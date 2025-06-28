@@ -1,0 +1,87 @@
+var asesorVirtual ={
+	name:'asesorVirtual',
+	delimiters: ['${', '}'],
+	template:'#asesor-virtual',
+	data: function(){
+		return  {
+			site_url: 'https://www.bci.cl/personas',
+			AsesorVirtualPanel: false,
+			panelCliente: false,
+			panelNoCliente: false,
+			panelMain: true
+		};
+	},
+	computed: {
+		
+	},
+	watch: {
+
+	},
+	methods: {
+		toggleAsesorVirtualPanel: function () {
+			var _this = this;
+			document.body.classList.toggle('open_panel');
+			_this.AsesorVirtualPanel = !_this.AsesorVirtualPanel;
+			if(!this.AsesorVirtualPanel && !this.panelMain){
+				this.showMainAsesor();
+			}
+		},
+		buttonCliente: function () {
+			this.panelMain = false;
+			this.panelNoCliente = false;
+			this.panelCliente = true;
+		},
+		buttonNoCliente: function () {
+			this.panelMain = false;
+			this.panelCliente = false;
+			this.panelNoCliente = true;
+		},
+		buttonVolver: function () {
+			this.panelNoCliente = false;
+			this.panelCliente = false;
+			this.panelMain = true;
+		},
+		showMainAsesor: function(){
+			var _this = this;
+			setTimeout(function(){
+				_this.panelMain = true;
+				_this.panelNoCliente = false;
+				_this.panelCliente = false;
+			}, 2000);
+		}
+	}
+};
+
+var skeletonAppAsesor ={
+	name:'skeleton-app-asesor',
+	delimiters: ['${', '}'],
+	template:'#skeleton-app-asesor',
+	data: function(){
+		return {
+			site_url: 'https://www.bci.cl/personas'
+		};
+	},
+	computed: {
+
+	},
+	components:{
+		'asesor-virtual': asesorVirtual
+	},
+	methods: {
+		
+	},
+	mounted: function(){
+
+	},
+	created: function () {
+
+	}
+};
+
+var appAsesorVirtual = new Vue({
+	name:'appAsesorVirtual',
+	el:'#app-asesor-virtual',
+	render:function(h){
+		return h(skeletonAppAsesor);
+	}
+});

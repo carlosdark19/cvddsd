@@ -1,0 +1,235 @@
+
+
+
+var rutJS = {
+	clean: function( value ) {
+			if ( typeof _value !== 'string' ) {
+				value = value.toString();
+			}
+			return value.replace( /^0+|[^0-9kK]+/g, '' ).toUpperCase().substring( 0, 9 );
+		},
+	format: function( _value, _default ) {
+			_value = this.clean( _value );
+
+			if ( !_value ) {
+				return _default || '';
+			}
+
+			if ( _value.length <= 1 ) {
+				return _value;
+			}
+
+			var result = _value.slice( -4, -1 ) + '-' + _value.substr( _value.length - 1 );
+			for ( var i = 4; i < _value.length; i += 3 ) {
+				result = _value.slice( -3 - i, -i ) + '.' + result;
+			}
+			return result;
+		},
+	validate: function (_rut) {
+    if (typeof (_rut) !== 'string') {
+      return false;
+    }
+    var cRut = _rut.replace(/[\.-]/g, '');
+    var cDv = cRut.charAt(cRut.length - 1).toUpperCase();
+    var nRut = parseInt(cRut.substr(0, cRut.length - 1));
+    if (isNaN(nRut)) {
+      return false;
+    }
+    var sum = 0;
+    var factor = 2;
+    nRut = nRut.toString();
+    for (var i = nRut.length - 1; i >= 0; i--) {
+      sum = sum + nRut.charAt(i) * factor;
+      factor = (factor + 1) % 8 || 2;
+    }
+    var computedDv = 0;
+
+    switch (sum % 11) {
+      case 1:
+        computedDv = 'k';
+        break;
+      case 0:
+        computedDv = 0;
+        break;
+      default:
+        computedDv = 11 - (sum % 11);
+        break;
+    }
+    return computedDv.toString().toUpperCase() === cDv.toString().toUpperCase();
+  },
+	message: 'Este RUT es inválido'
+};
+
+
+
+
+var panelLoginPersonas = {
+	name: 'mainPanelLoginPersonas',
+	template: '#main-panel-login-personas',
+	delimiters: ['${', '}'],
+	data: function() {
+		return {
+			isOpen: false,
+			validateServices: ['pida_su_credito', 'avance_tdc', 'pat', 'seguro_antirobo', 'seguro_automotriz', 'seguro_hogar', 'seguro_vital', 'tdc_aumento_cupo_diferenciado', 'simule_credito_hipotecario', 'seguimiento_online', 'solicitud_dividendo', 'pago_deuda_nacional', 'Simular_DAP', 'act_direcciones', 'conf_bcipass', 'seguimiento_casos', 'bloqueo_robo_extr', 'mis_certificados', 'mis_seguros_informacion', 'mis_vale_vistas', 'agrega_cuenta', 'cartolas_ttff', 'pfm', 'pago_anticipado_consumo_creditos', 'pagar_dividendo', 'compra_acciones', 'accidentes_pers', 'alcancia', 'act_datos', 'sac_datos_personales', 'tarjeta_adicional',  'pagar_cuentas_registradas','recarga_tarjeta_bip', 'donaciones_ttff', 'tarjeta_digital', 'deuda_nacional','emg_bloq_temp', 'emg_bloq_temp', 'bci_pass', 'multi_pass', 'emg_cambio_clave', 'solicitud_seguridad', 'hab_tdd', 'hab_tdd',],
+			defaultService: null
+		};
+	},
+	created: function() {
+		var self = this;
+		eventBus.$on('open-login-personas', this.selectedService);
+	},
+	mounted: function() {
+		this.saveDefaultService();
+		this.validatedLogin();
+	},
+	methods: {
+		selectedService: function(idService) {
+			var self = this;
+			
+			var selectedService = self.validateServices.filter(function(service) {
+				return service === idService;
+			});
+			if(selectedService.length > 0) {
+				self.changeService(selectedService[0]);
+			}
+			else {
+				self.changeService(self.defaultService);
+			}
+			
+			self.resetLogin();
+			self.validatedLogin();
+			self.openPanel();
+		},
+		resetLogin: function() {
+			var loginRut = document.querySelector('.form__login #frm input[name="rut_aux"]');
+			var loginPassword = document.querySelector('.form__login #frm input[name="clave"]');
+			loginRut.value = '';
+			loginPassword.value = '';
+		},
+		saveDefaultService: function() {
+			var serv = document.querySelector('.form__login #frm input[name="serv"]');
+			this.defaultService = serv.value;
+		},
+		validatedLogin: function() {
+			
+
+var loginSession = document.querySelector('form#frm');
+var passInput = loginSession.querySelector('[type="password"]'); 
+var rutInput = loginSession.querySelector('#rut_aux');
+var passIcon = loginSession.querySelector('.inner-password span');
+var btnSubmit = loginSession.querySelector('[type=submit]');
+var hidePass = 'icon-bci-visibility-off';
+var showPass = 'icon-bci-visibility-on';
+handlerPassword(passInput, passIcon);
+ 
+function handlerPassword(elInput, elIcon) {
+  	var sourceState = hidePass; 
+  	elIcon.addEventListener('click', function() {
+   	if(elIcon.classList.contains(hidePass)) {
+    	elIcon.classList.add(showPass);
+		elIcon.classList.remove(hidePass);
+      sourceState = showPass;
+      elInput.type = 'text';
+    }
+    else {
+    	elIcon.classList.add(hidePass);
+		elIcon.classList.remove(showPass);
+      sourceState = hidePass;
+      elInput.type = 'password';
+    }
+  });
+}
+	/* Validate RUT */ 
+var $submit = $("#frm [type=submit]"),
+    $inputs = $('#frm input[type=text],#frm input[type=password]');
+
+
+rutInput.addEventListener('input', function(e) {
+	var rutVal = rutJS.format(e.target.value);
+	rutInput.value = rutVal;
+
+	if(rutVal.length > 0) {
+		var isValid = rutJS.validate(rutVal);
+		if(isValid) {
+			var rutFull = rutJS.clean(rutVal);
+			var rutD = rutFull.slice(0, rutFull.length - 1);
+			var dv = rutFull.slice(-1);
+			rutInput.classList.remove('has-error');
+			rutInput.parentNode.querySelector('.error-message').innerHTML = '';
+			stateForm(passInput, rutVal, btnSubmit);
+			formIsValid(rutD, dv);
+		}
+		else {
+			rutInput.classList.add('has-error');
+			rutInput.parentNode.querySelector('.error-message').innerHTML = '<span class="color-red-normal d-block sub-text">'+rutJS.message+'</span>';
+			stateForm(passInput, rutVal, btnSubmit);
+		}
+	}	
+	else {
+		stateForm(passInput, rutVal, btnSubmit);
+		rutInput.classList.remove('has-error');
+		rutInput.parentNode.querySelector('.error-message').innerHTML = '';
+	}
+});
+
+passInput.addEventListener('input', function() {
+	stateForm(passInput, rutInput.value, btnSubmit);
+});
+	
+function stateForm(passInput, rutInput, btnSubmit) {
+	btnSubmit.disabled = (rutInput.value === '' || passInput.value === '' || !rutJS.validate(rutInput)) ? true : false;
+}  
+					
+	function formIsValid(rut, dv) {
+		$('#dig').val(dv);
+    var now = new Date();
+    $('#touch').val(now.getTime());
+    $('#rut').val(rut);
+	}
+	
+	function openChat(){
+		loadChar('personas');
+		setTimeout(function(){
+					$('.helpButtonEnabled').trigger('click');
+		},1500);
+	}
+	
+	function removeAttributeReadOnly( el ){
+		el.readOnly = false;
+	}
+	
+	// code for disable button
+	const myForm = document.querySelector('form');
+  const myButton = document.querySelector('form button');
+
+  myForm.addEventListener('submit', function(event) {
+    // Disable the button to prevent multiple submissions
+    myButton.disabled = true;
+  });
+	
+
+		},
+		changeService: function(idService) {
+			var serv = document.querySelector('.form__login #frm input[name="serv"]');
+			if(serv) {
+				serv.value = idService;
+			}
+		},
+		openPanel: function() {
+			document.body.classList.add('open_panel');
+			this.isOpen = true;
+		},
+		closePanel: function() {
+			document.body.classList.remove('open_panel');
+			this.isOpen = false;
+		}
+	}
+};
+
+var appConsumo = new Vue({
+	name: 'AppLoginPersonas',
+	el: '#app__loginpersonas',
+	render: function(h) {
+		return h(panelLoginPersonas);
+	}
+});

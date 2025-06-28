@@ -1,0 +1,47 @@
+h2[embeddedService-chatHeader_chatHeader]{
+	color: #fff;
+	font-family: 'verdana', sans-serif;
+	font-size: 16px!important;
+}
+.embeddedServiceSidebarFeature.featureBody p, .embeddedServiceSidebarFeature.featureBody span, .embeddedServiceSidebarFeature .uiOutputRichText{
+	font-family: 'verdana', sans-serif;
+}
+.slds-form-element__label.slds-no-flex.slds-assistive-text{
+	display: none!important;
+}
+.pre-chat-form_inputs[c-serv_PreChatForm_serv_PreChatForm] .slds-input{
+	text-indent: 20px;
+}
+.pre-chat-form_inputs div{
+	margin-bottom: 20px;
+}
+.slds-form-element__help{
+	margin-top: -15px;
+	font-size: 13px;
+	width: 100%;
+	max-width: 200px;
+}
+.slds-button{
+	border-radius: 50px!important;
+	background-color: #E2E8EA;
+	width: 100%;
+	max-width: 200px;
+	height: 50px;
+	border: 0;
+}
+.pre-chat-form_button_enabled .slds-button{
+	background: #28892b;
+	border: 0!important;
+	color: #fff;
+	outline: none!important;
+}
+@media screen and (min-width: 768px){
+	.embeddedServiceHelpButton .helpButton, .embeddedServiceHelpButton.embeddedServiceBottomTabBar .helpButton{
+		bottom: 15px!important;
+		margin-right: 15px!important;
+	}
+	.embeddedServiceHelpButton .uiButton .helpButtonLabel{
+		bottom: 15px!important;
+		right: 85px!important;
+	}
+}

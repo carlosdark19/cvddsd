@@ -1,0 +1,136 @@
+	.compromiso {
+		margin-bottom: 4rem;
+	}
+	.compromiso .bg-color{
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 100%;
+		transition: all 0.3s ease;
+	}
+
+	.compromiso .box-secondary
+	{
+		background-image: url('https://cdn3.bci.cl/uploads/6a10936d-cea0-4913-bc98-ce0f6006dfcf/original/Mask_group.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	.compromiso .cont-compromiso-box .bg-home  {  min-height: 335px; }
+	.compromiso .cont-compromiso-box .col-md-4:nth-child(1) .bg-home {
+		background-image: url('https://cdn3.bci.cl/uploads/408237fb-5c0d-4021-b327-52fb823e725f/original/bg-ondas-green.png');
+	}
+	.compromiso .cont-compromiso-box .col-md-4:nth-child(2) .bg-home {
+		background-image: url('https://cdn3.bci.cl/uploads/8068c123-4ab2-422f-8bf5-7be784afe031/original/bg-ondas-blue.png');
+	}
+	.compromiso .cont-compromiso-box .col-md-4:nth-child(3) .bg-home {
+		background-image: url('https://cdn3.bci.cl/uploads/29ffba93-55a9-4845-b518-3e48cfc7fa5e/original/bg-ondas-red.png');
+	}
+	.compromiso .img-destacada{
+		max-height: 170px;
+		margin-top: -80px;
+		max-width: 150px;
+		transition: all 0.5s ease;
+		z-index: 1;
+	}
+	.compromiso .img-circle {
+		width: 136px;
+    height: 136px;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.frame-circles {
+    background-repeat: no-repeat;
+    background-position: center;
+		background-image: url(https://cdn3.bci.cl/uploads/5ab637b4-ca8d-43f4-909e-02a23527e5a6/original/frame_blue.svg);
+		background-size: contain;
+		margin-top: -105px;
+		position: relative;
+	}
+	.compromiso .cont-compromiso-box .col-md-4:nth-child(2) .frame-circles {
+		background-image: url(https://cdn3.bci.cl/uploads/98cd4636-65b8-4909-a02e-b9230cc3b90f/original/frame_red.svg);
+	}
+	.compromiso .cont-compromiso-box .col-md-4:nth-child(3) .frame-circles {
+		background-image: url(https://cdn3.bci.cl/uploads/902a0f5d-170b-4a61-ba06-6a645bb0f103/original/frame_green.svg);
+	}
+	.frame-circles .frame-image {
+		overflow: inherit; 
+	}
+	.frame-circles .frame-image img {
+		height: auto;
+	}
+	.compromiso .bg-color:hover{
+		background-position: center -25px;
+	}
+	.padding-section {
+    padding: 4rem 0;
+	}
+	.padding-top-section{
+		padding-top: 4rem;
+	}
+	.padding-bottom-section{
+		padding-bottom: 4rem;
+	}
+	.border-gray-light{
+		border-color: var(--gray-light) !important;
+	}
+/*
+	.box-shadow-gray-light{
+		-moz-box-shadow: 		-5px -5px 0 var(--gray-light);
+		-webkit-box-shadow: -5px -5px 0 var(--gray-light);
+		box-shadow: 				-5px -5px 0 var(--gray-light);
+	}
+*/
+	.cont-compromiso-box{
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	.cont-compromiso-box .bg-color{
+		max-width: 260px;
+	}
+	.cont-img-no-comercial img{
+		max-width: 70px;	
+	}
+	.cont-compromiso-box .bg-ondas{
+		left: 0;
+		position: absolute;
+    top: 0;
+		transition: all 0.5s ease;
+    width: 100%;
+	}
+	.cont-compromiso-box .bg-color:hover .bg-ondas{
+		top: -8px;
+	}
+	.box-secondary {  }
+	@media (min-width: 768px){
+		.compromiso .bg-color{
+			-moz-box-shadow: 		-10px -10px 0 #F6F7F8;
+			-webkit-box-shadow: -10px -10px 0 #F6F7F8;
+			box-shadow: 				-10px -10px 0 #F6F7F8;
+		}
+		.padding-section {
+			padding: 7rem 0;
+		}
+		.padding-top-section{
+			padding-top: 7rem;
+		}
+		.padding-bottom-section{
+			padding-bottom: 7rem;
+		}
+		.cont-compromiso-box{
+			overflow-x: visible;
+		}
+		.cont-compromiso-box .bg-color{
+			max-width: 100%;
+		}
+		.compromiso .img-destacada{
+			margin-top: -100px;
+		}
+		.cont-img-no-comercial img{
+			max-width: 100%;	
+		}
+	}
+.text-truncate3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.text-truncate4 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
